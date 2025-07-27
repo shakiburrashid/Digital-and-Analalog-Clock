@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function App() {
 
 
-  const [time, setTime] = useState(new Date())
+  const [time, setTime] = useState(new Date());
 
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function App() {
 
 
   function hour() {
-    let hour = time.getHours() % 12 || 12;
+    let hour = time.getHours() % 12 || 12 < 10 ? "0" + time.getHours() % 12 || 12 : "" + time.getHours() % 12 || 12;
     return hour;
   }
   function minute() {
@@ -39,6 +39,9 @@ function App() {
     let y = time.getFullYear();
     return `${d} / ${m} / ${y}`
   }
+  const hourRotation = time.getHours() * 30 + time.getMinutes() / 2;
+  const minuteRoation = time.getMinutes() * 6;
+  const secondRotation = time.getSeconds() * 6;
 
 
 
@@ -46,10 +49,10 @@ function App() {
     <>
       <div className="h-[100vh] m-auto flex justify-center items-center">
         <div className="w-200 h-120 border-2 border-solid border-red-400 flex items-center justify-around">
-          <div className="bg-[url(./assets/Clockimage.png)] w-100 h-100 bg-no-repeat bg-size-[100%] relative">
-            <div className="hour bg-black w-[3.5%] h-[28%] rounded-xl absolute top-[22%] left-[49.4%]"></div>
-            <div className="minute bg-black w-[3%] h-[33%] rounded-xl absolute top-[17.8%] left-[49.4%] "></div>
-            <div className="second bg-red-500 w-[2.5%] h-[38%] rounded-xl absolute top-[13%] left-[49.7%]"></div>
+          <div className="bg-[url(./assets/Clockimage.png)] w-100 h-100 bg-no-repeat bg-size-[100%] relative origin-bottom">
+            <div className="hour bg-black w-[3.5%] h-[28%] rounded-xl absolute top-[22%] left-[49.4%] origin-bottom" style={{ transform: `rotate(${hourRotation}deg)` }}></div>
+            <div className="minute bg-black w-[3%] h-[33%] rounded-xl absolute top-[17.8%] left-[49.4%] origin-bottom" style={{ transform: `rotate(${minuteRoation}deg)` }}></div>
+            <div className="second bg-red-500 w-[2.5%] h-[38%] rounded-xl absolute top-[13%] left-[49.7%] origin-bottom" style={{ transform: `rotate(${secondRotation}deg)` }}></div>
             <div className="bg-black w-[10%] h-[10%] rounded-full absolute top-[44%] left-[46%]"></div>
           </div>
           <div className="flex flex-col gap-10 justify-center items-center">
