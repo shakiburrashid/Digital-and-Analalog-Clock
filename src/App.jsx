@@ -48,17 +48,19 @@ function App() {
   return (
     <>
       <div className="h-[100vh] m-auto flex justify-center items-center">
-        <div className="w-[150vh] h-[80vh] flex items-center justify-around border-5 border-red-800">
-          <div className="bg-[url(./assets/Clockimage.png)] w-100 h-100 bg-no-repeat bg-size-[100%] relative origin-bottom">
+        <div className="w-[150vh] h-[80vh] flex items-center justify-around border-5 border-red-800 || max-md:flex-col max-md:w-[80vh] max-md:h-[100vh] max-md:mt-10">
+          <div className="bg-[url(./assets/Clockimage.png)] w-100 h-100 bg-no-repeat bg-size-[100%] relative origin-bottom || max-md:bg-size-[100%]">
             <div className="HOUR bg-black w-[3.5%] h-[28%] rounded-xl absolute top-[22%] left-[49.4%] origin-bottom " style={{ transform: `rotate(${hourRotation}deg)` }}></div>
             <div className="MINUTE bg-black w-[3%] h-[33%] rounded-xl absolute top-[17.8%] left-[49.4%] origin-bottom " style={{ transform: `rotate(${minuteRoation}deg)` }}></div>
             <div className="SECOND bg-red-500 w-[2.5%] h-[38%] rounded-xl absolute top-[13%] left-[49.9%] origin-bottom " style={{ transform: `rotate(${secondRotation}deg)` }}></div>
             <div className="CENTER CIRCLE  bg-black w-[10%] h-[10%] rounded-full absolute top-[44%] left-[46%] "></div>
           </div>
           <div className="flex flex-col gap-10 justify-center items-center">
-            <div className="grid grid-cols-2 gap-5 items-center text-7xl font-bold">
-              <h1 className="row-span-2 text-[8rem]">{hour()}</h1>
+            <div className="grid grid-cols-2 gap-5 items-center text-7xl font-bold || max-md:flex max-md:gap-2 max-md:justify-center max-md:items-center">
+              <h1 className="row-span-2 text-[8rem] || max-md:text-7xl">{hour()}</h1>
+              <h1 className="md:hidden">:</h1>
               <h1>{minute()}</h1>
+              <h1 className="md:hidden">:</h1>
               <h1>{seconds()}</h1>
             </div>
             <div>
