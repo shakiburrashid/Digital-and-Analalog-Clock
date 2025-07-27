@@ -48,12 +48,12 @@ function App() {
   return (
     <>
       <div className="h-[100vh] m-auto flex justify-center items-center">
-        <div className="w-200 h-120 border-2 border-solid border-red-400 flex items-center justify-around">
+        <div className="w-[150vh] h-[80vh] flex items-center justify-around border-5 border-red-800">
           <div className="bg-[url(./assets/Clockimage.png)] w-100 h-100 bg-no-repeat bg-size-[100%] relative origin-bottom">
-            <div className="hour bg-black w-[3.5%] h-[28%] rounded-xl absolute top-[22%] left-[49.4%] origin-bottom" style={{ transform: `rotate(${hourRotation}deg)` }}></div>
-            <div className="minute bg-black w-[3%] h-[33%] rounded-xl absolute top-[17.8%] left-[49.4%] origin-bottom" style={{ transform: `rotate(${minuteRoation}deg)` }}></div>
-            <div className="second bg-red-500 w-[2.5%] h-[38%] rounded-xl absolute top-[13%] left-[49.7%] origin-bottom" style={{ transform: `rotate(${secondRotation}deg)` }}></div>
-            <div className="bg-black w-[10%] h-[10%] rounded-full absolute top-[44%] left-[46%]"></div>
+            <div className="HOUR bg-black w-[3.5%] h-[28%] rounded-xl absolute top-[22%] left-[49.4%] origin-bottom " style={{ transform: `rotate(${hourRotation}deg)` }}></div>
+            <div className="MINUTE bg-black w-[3%] h-[33%] rounded-xl absolute top-[17.8%] left-[49.4%] origin-bottom " style={{ transform: `rotate(${minuteRoation}deg)` }}></div>
+            <div className="SECOND bg-red-500 w-[2.5%] h-[38%] rounded-xl absolute top-[13%] left-[49.9%] origin-bottom " style={{ transform: `rotate(${secondRotation}deg)` }}></div>
+            <div className="CENTER CIRCLE  bg-black w-[10%] h-[10%] rounded-full absolute top-[44%] left-[46%] "></div>
           </div>
           <div className="flex flex-col gap-10 justify-center items-center">
             <div className="grid grid-cols-2 gap-5 items-center text-7xl font-bold">
