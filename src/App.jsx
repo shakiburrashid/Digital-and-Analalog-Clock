@@ -53,8 +53,8 @@ function App() {
   return (
     <>
       {/* <div className="h-[100vh] m-auto flex justify-center items-center"> */}
-      <div className="h-[80vh] flex items-center md:justify-center gap-35 p-5 || max-md:flex-col max-md:w-[50vh] max-md:h-[75vh] max-md:gap-8 max-md:items-center">
-        <div className="bg-[url(./assets/Clockimage.png)] bg-no-repeat bg-size-[100%]  w-[100vh] h-[100vh]   relative origin-bottom || max-md:bg-size-[100%] max-md:w-[45vh] max-md:h-[60vh] ">
+      <div className="h-[80vh] flex items-center md:justify-center gap-35 p-5 || max-md:flex-col max-md:w-[100%] max-md:h-[75vh] max-md:gap-8 max-md:items-center max-md:justify-center">
+        <div className="bg-[url(./assets/Clockimage.png)] bg-no-repeat bg-size-[100%]  w-[100vh] h-[100vh]   relative origin-bottom mt-[10%] || max-md:bg-size-[100%] max-md:w-[45vh] max-md:h-[60vh]">
 
           <div className="w-[100vh] h-[100vh] || max-md:bg-size-[100%] max-md:w-[45vh] max-md:h-[50vh] ">
             <div className="HOUR bg-black w-[3.5%] h-[28%] rounded-xl absolute top-[22%] left-[49.4%] origin-bottom     || max-md:top-[16.9%] max-md:left-[49%] " style={{ transform: `rotate(${hourRotation}deg)` }}></div>
