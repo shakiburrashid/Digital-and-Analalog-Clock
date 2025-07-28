@@ -51,7 +51,7 @@ function App() {
   return (
     <>
       <div className="h-[100vh] m-auto flex justify-center items-center">
-        <div className="w-[200vh] h-[80vh] flex items-center gap-45 p-5 || max-md:flex-col max-md:w-[80vh] max-md:h-[100vh] max-md:gap-20 ">
+        <div className="w-[200vh] h-[80vh] flex items-center justify-center gap-45 p-5 || max-md:flex-col max-md:w-[80vh] max-md:h-[100vh] max-md:gap-20 ">
           <div className="bg-[url(./assets/Clockimage.png)] w-100 h-100 bg-no-repeat bg-size-[100%] relative origin-bottom || max-md:bg-size-[100%]">
             <div className="HOUR bg-black w-[3.5%] h-[28%] rounded-xl absolute top-[22%] left-[49.4%] origin-bottom " style={{ transform: `rotate(${hourRotation}deg)` }}></div>
             <div className="MINUTE bg-black w-[3%] h-[33%] rounded-xl absolute top-[17.8%] left-[49.4%] origin-bottom " style={{ transform: `rotate(${minuteRoation}deg)` }}></div>
