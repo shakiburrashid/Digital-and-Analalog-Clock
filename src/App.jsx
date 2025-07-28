@@ -19,10 +19,12 @@ function App() {
   }, []);
 
 
-
+  const exactHour = time.getHours() % 12 || 12;
 
   function hour() {
-    let hour = (time.getHours() % 12 || 12) < 10 ? ("0" + time.getHours() % 12 || 12) : ("" + time.getHours() % 12 || 12);
+    // const exactHour = time.getHours() % 12 || 12;
+    // let hour = (time.getHours() % 12 || 12) < 10 ? ("0" + time.getHours() % 12 || 12) : ("" + time.getHours() % 12 || 12);
+    let hour = exactHour < 10 ? "0" + exactHour : "" + exactHour;
     return hour;
   }
   function minute() {
@@ -51,8 +53,8 @@ function App() {
   return (
     <>
       <div className="h-[100vh] m-auto flex justify-center items-center">
-        <div className="w-[200vh] h-[80vh] flex items-center justify-center gap-45 p-5 || max-md:flex-col max-md:w-[80vh] max-md:h-[100vh] max-md:gap-20 ">
-          <div className="bg-[url(./assets/Clockimage.png)] w-100 h-100 bg-no-repeat bg-size-[100%] relative origin-bottom || max-md:bg-size-[100%]">
+        <div className="h-[80vh] flex items-center justify-center gap-35 p-5 || max-md:flex-col max-md:w-[80vh] max-md:h-[100vh] max-md:gap-20 ">
+          <div className="bg-[url(./assets/Clockimage.png)]  w-[100vh] h-[100vh]  bg-no-repeat bg-size-[100%] relative origin-bottom || max-md:bg-size-[100%]">
             <div className="HOUR bg-black w-[3.5%] h-[28%] rounded-xl absolute top-[22%] left-[49.4%] origin-bottom " style={{ transform: `rotate(${hourRotation}deg)` }}></div>
             <div className="MINUTE bg-black w-[3%] h-[33%] rounded-xl absolute top-[17.8%] left-[49.4%] origin-bottom " style={{ transform: `rotate(${minuteRoation}deg)` }}></div>
             <div className="SECOND bg-red-500 w-[2.5%] h-[38%] rounded-xl absolute top-[13%] left-[49.9%] origin-bottom " style={{ transform: `rotate(${secondRotation}deg)` }}></div>
@@ -60,7 +62,7 @@ function App() {
           </div>
           <div className="flex flex-col gap-10 justify-center items-center">
             <div className="grid grid-cols-2 gap-5 items-center text-7xl font-bold || max-md:flex max-md:gap-2 max-md:justify-center max-md:items-center">
-              <h1 className="row-span-2 text-[8rem] || max-md:text-7xl">{hour()}</h1>
+              <h1 className="row-span-2 text-[12rem] || max-md:text-7xl">{hour()}</h1>
               <h1 className="md:hidden">:</h1>
               <h1>{minute()}</h1>
               <h1 className="md:hidden">:</h1>
