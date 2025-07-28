@@ -67,7 +67,7 @@ function App() {
               <h1>{seconds()}</h1>
             </div>
             <div>
-              <h1 className="text-5xl font-bold">{datemonthyear()}</h1>
+              <h1 className="text-5xl font-bold || max-md:text-3xl">{datemonthyear()}</h1>
             </div>
           </div>
 
