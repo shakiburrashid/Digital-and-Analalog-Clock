@@ -34,10 +34,13 @@ function App() {
     return second;
   };
   function datemonthyear() {
+    const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     let d = time.getDate();
-    let m = time.getMonth();
+    let m = month[time.getMonth()];
     let y = time.getFullYear();
-    return `${d} / ${m} / ${y}`
+    let days = weekday[time.getDay()]
+    return `${days} ${m} ${d} , ${y}`
   }
   const hourRotation = time.getHours() * 30 + time.getMinutes() / 2;
   const minuteRoation = time.getMinutes() * 6;
@@ -64,7 +67,7 @@ function App() {
               <h1>{seconds()}</h1>
             </div>
             <div>
-              <h1 className="text-5xl">{datemonthyear()}</h1>
+              <h1 className="text-5xl font-bold">{datemonthyear()}</h1>
             </div>
           </div>
 
